@@ -1,0 +1,48 @@
+{
+  "name": "appium-cucumber-wdio-boilerplate",
+  "version": "1.0.0",
+  "description": "UI mobile automation framework based on WebdriverIO and Cucumber",
+  "scripts": {
+    "clean": "rimraf allure-results && rimraf allure-report && rimraf junit-results",
+    "clean-report": "allure generate --clean ./allure-results",
+    "open-report": "npm run clean-report && allure open",
+    "report": "npm run clean-report && npm run open-report",
+    "wdio-mobile-android": "npm run clean && npx wdio run ./wdioAndroid.conf.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShubhamSarkarFrost/appium-cucumber-wdio-boilerplate.git"
+  },
+  "keywords": [
+    "wdio",
+    "cucumber",
+    "gherkin",
+    "typescript"
+  ],
+  "author": "ShubhamSarkarFrost",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShubhamSarkarFrost/appium-cucumber-wdio-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ShubhamSarkarFrost/appium-cucumber-wdio-boilerplate/edit/main/README.md",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@wdio/appium-service": "^8.7.0",
+    "@wdio/cli": "^8.7.0",
+    "@wdio/cucumber-framework": "^8.7.0",
+    "@wdio/local-runner": "^8.7.0",
+    "@wdio/spec-reporter": "^8.7.0",
+    "appium": "^2.0.0-beta.61",
+    "appium-uiautomator2-driver": "^2.14.0",
+    "appium-xcuitest-driver": "^4.21.22",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "@wdio/allure-reporter": "^9.1.3",
+    "@wdio/junit-reporter": "^9.1.3"
+  },
+  "dependencies": {
+    "cucumber": "^6.0.7",
+    "rimraf": "^3.0.2"
+  }
+}
